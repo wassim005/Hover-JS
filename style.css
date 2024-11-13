@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-family: system-ui;
+}
+
+body{
+    background-color: #000;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    position: relative;
+    height: 100vh;
+}
+
+.container header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container header img{
+    width: 50px;
+    margin: 20px 150px;
+}
+
+.container header .links{
+    margin-right: 150px;
+}
+
+.container header .links i{
+    display: none;
+}
+
+.container header .links a{
+    position: relative;
+    margin: 0px 30px;
+    padding: 3px 0;
+    text-transform: capitalize;
+    opacity: 0.5;
+    font-size: 1.1em;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.container header .links a::after{
+    content: "";
+    background-color: #fff;
+    height: 2px;
+    width: 0%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: 0.5s;
+}
+
+.container header .links a:hover::after{
+    width: 100%;;
+}
+
+.container header .links .active::after{
+    content: "";
+    background-color: #fff;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: 0.5s;}
+
+.container header .links a:hover, .container header .links .active{
+    opacity: 1;
+}
+
+.container section{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80vh;
+}
+
+.container section .text h2{
+    font-size: 3em;
+    text-transform: uppercase;
+}
+
+.container section .text p{
+    width: 70%;
+}
+
+.container section .text a{
+    background-color: #fff;
+    color: #000;
+    display: inline-block;
+    border-radius: 20px;
+    padding: 8px 20px;
+    margin: 10px 0;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.container .icons{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.container .icons img{
+    width: 100px;
+    margin: 0 10px;
+    transition: 0.5s;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.container .icons img:hover{
+    scale: 1.1;
+    opacity: 1;
+}
+
+@media (max-width:1280px){
+    
+    .container .icons img{
+        width: 50px;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+    .container header .links{
+        margin-right: 100px;
+    }
+    .container header .links i{
+        display: inline;
+        font-size: 3em;
+        cursor: pointer;
+        opacity: 0.7;
+    }
+    .container header .links i:hover{
+        opacity: 1;
+    }
+    .container header .links a{
+        display: none;
+    }
+}
+
+@media (max-width:650px){
+    .container section .image img{
+        width: 200px;
+    }
+    .container .icons img{
+        width: 50px;
+        margin: 0 10px;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+    .container header .links{
+        margin-right: 20px;
+    }
+    .container header .links i{
+        display: inline;
+        font-size: 3em;
+        cursor: pointer;
+        opacity: 0.7;
+    }
+    .container header .links i:hover{
+        opacity: 1;
+    }
+    .container header .links a{
+        display: none;
+    }
+    .container header img{
+        width: 50px;
+        margin: 20px 30px;
+    }
+}
+
+@media (max-width:550px){
+    .container section .image img{
+        width: 150px;
+    }
+    .container .icons img{
+        width: 55px;
+        margin: 0;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+    .container section .text h2{
+        font-size: 2em;
+        text-transform: uppercase;
+    }
+    
+    .container section .text p{
+        width: 70%;
+    }
+    .container section{
+        height: 60vh;
+    }
+}
